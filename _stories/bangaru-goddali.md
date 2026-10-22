@@ -6,6 +6,7 @@ author_en: Chandamama
 date: 2026-10-22
 category: జానపద కథ
 category_en: Folk Tale
+image: /assets/images/bangaru-goddali/bangaru-goddali.jpg
 summary: పేద కట్టెలవాడు రామయ్య గొడ్డలి నదిలో పడిపోయింది. జలదేవత అతనికి బంగారు గొడ్డలిని చూపించింది…
 summary_en: Poor Ramayya the woodcutter drops his only axe into the river. Then the river goddess rises, holding out a golden one…
 moral: నిజాయితీకి ఎప్పుడూ తగిన ఫలితం దక్కుతుంది.
