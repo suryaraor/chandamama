@@ -1,0 +1,24 @@
+title: చందమామ
+tagline: పిల్లల బొమ్మల కథల పత్రిక
+description: చందమామ శైలిలో తెలుగు కథలు
+lang: te
+baseurl: /chandamama
+url: https://suryaraor.github.io
+
+markdown: kramdown
+
+collections:
+  stories:
+    output: true
+    permalink: /stories/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: story
+
+exclude:
+  - README.md
+  - story-template.md

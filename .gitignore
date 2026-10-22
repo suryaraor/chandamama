@@ -1,0 +1,8 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
+.claude-flow/
+
+[OK] Command outcome recorded
+draft*.md

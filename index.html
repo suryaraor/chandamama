@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1>కథలు</h1>
+  <p class="ornament">❁ ❁ ❁</p>
+</section>
+
+{% assign stories = site.stories | sort: 'date' | reverse %}
+<ul class="story-list">
+  {% for story in stories %}
+  <li class="story-card">
+    <a href="{{ story.url | relative_url }}">
+      {% if story.image %}<img src="{{ story.image | relative_url }}" alt="" loading="lazy">{% endif %}
+      <div class="card-text">
+        {% if story.category %}<span class="category">{{ story.category }}</span>{% endif %}
+        <h2>{{ story.title }}</h2>
+        {% if story.author %}<p class="byline">రచన: {{ story.author }}</p>{% endif %}
+        <p class="excerpt">{{ story.content | strip_html | truncate: 140 }}</p>
+      </div>
+    </a>
+  </li>
+  {% else %}
+  <li class="empty">ఇంకా కథలు లేవు. <code>_stories/</code> లో మొదటి కథ రాయండి!</li>
+  {% endfor %}
+</ul>

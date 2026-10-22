@@ -1,0 +1,204 @@
+:root {
+  --paper: #fbf3dc;
+  --paper-deep: #f3e6bf;
+  --ink: #2b1d14;
+  --ink-soft: #5a4636;
+  --maroon: #8b1a1a;
+  --saffron: #d9731a;
+  --gold: #f6c33b;
+  --mast: #7a1414;
+  --title-font: "Ramabhadra", "Noto Sans Telugu", sans-serif;
+  --body-font: "Mandali", "Noto Sans Telugu", sans-serif;
+  --deco-font: "Suravaram", "Noto Serif Telugu", serif;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 19px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  background-image: radial-gradient(ellipse at center, transparent 60%, rgba(160, 110, 40, 0.12) 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--body-font);
+  line-height: 1.9;
+}
+
+a { color: var(--maroon); }
+
+/* Masthead */
+.masthead {
+  background: var(--mast);
+  color: var(--paper);
+  text-align: center;
+  padding: 1.2rem 1rem 0.9rem;
+  border-bottom: 6px double var(--gold);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--gold);
+}
+.moon { width: 3rem; height: 3rem; }
+.brand-name {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+}
+.tagline {
+  margin: 0.2rem 0 0;
+  font-family: var(--deco-font);
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* Page frame */
+.page {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 2rem 2.2rem;
+  background: var(--paper);
+  border: 3px solid var(--maroon);
+  outline: 1px solid var(--maroon);
+  outline-offset: 5px;
+  box-shadow: 0 6px 24px rgba(90, 50, 10, 0.15);
+}
+
+.ornament {
+  color: var(--saffron);
+  letter-spacing: 0.6em;
+  text-align: center;
+}
+
+/* Home */
+.intro { text-align: center; }
+.intro h1 {
+  font-family: var(--title-font);
+  color: var(--maroon);
+  font-size: 2.2rem;
+  margin: 0;
+}
+.intro .ornament { margin: 0 0 1.5rem; }
+
+.story-list { list-style: none; padding: 0; margin: 0; }
+.story-card { border-bottom: 1px dashed var(--saffron); }
+.story-card:last-child { border-bottom: 0; }
+.story-card a {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem 0.4rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.story-card a:hover { background: var(--paper-deep); }
+.story-card img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border: 2px solid var(--maroon);
+  flex-shrink: 0;
+}
+.story-card h2 {
+  font-family: var(--title-font);
+  color: var(--maroon);
+  font-size: 1.5rem;
+  margin: 0.1rem 0;
+  line-height: 1.4;
+}
+.excerpt { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+.empty { text-align: center; color: var(--ink-soft); }
+
+.category {
+  display: inline-block;
+  font-family: var(--deco-font);
+  font-size: 0.8rem;
+  color: var(--paper);
+  background: var(--saffron);
+  padding: 0 0.7rem;
+  border-radius: 2px;
+  margin: 0;
+}
+.byline { margin: 0; font-family: var(--deco-font); color: var(--ink-soft); font-size: 0.95rem; }
+
+/* Story */
+.story { text-align: left; }
+.story > .category { display: table; margin: 0 auto; }
+.story-title {
+  font-family: var(--title-font);
+  color: var(--maroon);
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 1.35;
+  margin: 0.4rem 0 0.2rem;
+}
+.story > .byline { text-align: center; margin-bottom: 1.4rem; }
+.story > .byline::after {
+  content: "❁ ❁ ❁";
+  display: block;
+  color: var(--saffron);
+  letter-spacing: 0.6em;
+  margin-top: 0.6rem;
+}
+
+.illustration { margin: 0 auto 1.6rem; text-align: center; }
+.illustration img {
+  max-width: 100%;
+  border: 3px solid var(--maroon);
+  outline: 1px solid var(--maroon);
+  outline-offset: 4px;
+}
+
+.story-body p { margin: 0 0 1.1em; text-indent: 2em; text-align: justify; }
+.story-body img { max-width: 100%; display: block; margin: 1.2rem auto; border: 2px solid var(--maroon); }
+.story-body blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1.2rem;
+  border-left: 4px solid var(--saffron);
+  background: var(--paper-deep);
+}
+.story-body blockquote p { text-indent: 0; }
+
+.moral {
+  margin: 2rem 0 1rem;
+  padding: 1rem 1.4rem;
+  border: 2px solid var(--saffron);
+  background: var(--paper-deep);
+  position: relative;
+  text-align: center;
+}
+.moral-label {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--maroon);
+  color: var(--gold);
+  font-family: var(--title-font);
+  padding: 0 0.9rem;
+  font-size: 0.95rem;
+}
+.moral p { margin: 0.3rem 0 0; font-family: var(--deco-font); font-size: 1.1rem; }
+
+.end-mark { text-align: center; color: var(--maroon); font-family: var(--title-font); margin-top: 1.6rem; }
+
+.back { max-width: 46rem; margin: -1rem auto 0; text-align: center; font-family: var(--deco-font); }
+
+.footer { text-align: center; color: var(--ink-soft); font-size: 0.85rem; padding: 1rem 1rem 2rem; }
+.footer p { margin: 0; }
+
+@media (max-width: 600px) {
+  html { font-size: 17px; }
+  .page { margin: 1rem 16px; padding: 1.2rem 1rem; }
+  .brand-name { font-size: 2.3rem; }
+  .moon { width: 2.3rem; height: 2.3rem; }
+  .story-title { font-size: 1.9rem; }
+  .story-card a { flex-direction: column; }
+  .story-card img { width: 100%; height: 11rem; }
+}

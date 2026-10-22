@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="story">
+  {% if page.category %}<p class="category">{{ page.category }}</p>{% endif %}
+  <h1 class="story-title">{{ page.title }}</h1>
+  {% if page.author %}<p class="byline">రచన: {{ page.author }}</p>{% endif %}
+
+  {% if page.image %}
+  <figure class="illustration">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </figure>
+  {% endif %}
+
+  <div class="story-body">
+    {{ content }}
+  </div>
+
+  {% if page.moral %}
+  <aside class="moral">
+    <span class="moral-label">నీతి</span>
+    <p>{{ page.moral }}</p>
+  </aside>
+  {% endif %}
+
+  <p class="end-mark">❁ సమాప్తం ❁</p>
+</article>
+
+<nav class="back"><a href="{{ '/' | relative_url }}">← అన్ని కథలు</a></nav>
