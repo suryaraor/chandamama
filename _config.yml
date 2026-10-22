@@ -1,5 +1,7 @@
 title: చందమామ
 tagline: పిల్లల బొమ్మల కథల పత్రిక
+title_en: Chandamama
+tagline_en: A picture-story magazine for children
 description: చందమామ శైలిలో తెలుగు కథలు
 lang: te
 baseurl: /chandamama
@@ -22,3 +24,5 @@ defaults:
 exclude:
   - README.md
   - story-template.md
+  - input-story
+  - archive

@@ -7,3 +7,5 @@ Gemfile.lock
 [OK] Command outcome recorded
 draft*.md
 input-story/
+archive/
+.claude/settings.local.json

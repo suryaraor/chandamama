@@ -1,12 +1,20 @@
 ---
 title: తలలేని రౌతు – స్లీపీ హాలో రహస్యం
+title_en: The Headless Horseman – The Secret of Sleepy Hollow
 author: సూర్య
+author_en: Surya
 date: 2026-10-22
 category: అనువాద కథ
+category_en: Retold Classic
 original: The Legend of Sleepy Hollow
-image: /assets/images/talaleni-rauthu/title.jpeg
+image: /assets/images/talaleni-rauthu/title.jpg
+summary: దెయ్యాల కథలంటే భయపడే ఇకాబోడ్ పంతులు అర్ధరాత్రి అడవి దారిలో ఒంటరిగా వెళ్తుండగా, వెనుక నుంచి గుర్రపు డెక్కల చప్పుడు వినిపించింది…
+summary_en: Ichabod the schoolmaster is terrified of ghost stories. Riding home alone through the forest at midnight, he hears hoofbeats behind him…
 moral: మూఢనమ్మకాలు, విపరీతమైన భయాలు ఉన్నచోట మనుషులు తమ స్వార్థం కోసం భయాన్ని ఆయుధంగా మలచుకుని సులభంగా మోసం చేయగలరు.
+moral_en: Where superstition and wild fears take hold, people can easily turn fear into a weapon and deceive others for their own gain.
 ---
+
+<div class="te" markdown="1">
 
 అనగనగా ‘స్లీపీ హాలో’ అనే ఒక ప్రశాంతమైన పల్లెటూరు ఉండేది. చుట్టూ దట్టమైన అడవులు, ఎత్తైన కొండలు, సన్నటి వాగులతో నిండిన ఆ ఊరిలో ఒక వింత వాతావరణం నెలకొనేది. ఆ ఊరి ప్రజలకు దెయ్యాలు, భూతాలు, మంత్రాల కథలంటే అమితమైన నమ్మకం.
 
@@ -22,8 +30,40 @@ moral: మూఢనమ్మకాలు, విపరీతమైన భయా�
 
 భయంతో వణికిపోయిన ఇకాబోడ్ గుర్రాన్ని వేగంగా అదిలించాడు. కానీ ఆ వింత రౌతు అతడిని వెంటాడి, తన చేతిలో ఉన్న గుండ్రటి గుమ్మడికాయను బలంగా ఇకాబోడ్ వైపు విసిరాడు. ఆ దెబ్బకు ఇకాబోడ్ గుర్రంపై నుంచి కిందపడి అచేతనమయ్యాడు.
 
-![మరుసటి రోజు ఉదయం వంతెన దగ్గర](/chandamama/assets/images/talaleni-rauthu/image-1.jpeg)
+<figure>
+  <img src="{{ site.baseurl }}/assets/images/talaleni-rauthu/image-1.jpg" alt="వంతెన దగ్గర పడి ఉన్న టోపీ, పగిలిన గుమ్మడికాయను చూసి ఆశ్చర్యపోతున్న ఊరి ప్రజలు, పక్కన మేస్తున్న గుర్రం" width="1600" height="1195" loading="lazy">
+  <figcaption>మరుసటి రోజు ఉదయం వంతెన దగ్గర…</figcaption>
+</figure>
 
 మరుసటి రోజు ఉదయం, ఊరి ప్రజలకు వంతెన పక్కన నలిగిపోయిన ఇకాబోడ్ టోపీ, పగిలిన గుమ్మడికాయ ముక్కలు మరియు అనాథగా నిలిచిన గుర్రం మాత్రమే కనిపించాయి. ఇకాబోడ్ జాడ ఎవరికీ దొరకలేదు. అతడు తలలేని రౌతు చేతిలో ప్రాణాలు పోగొట్టుకున్నాడని కొందరు నమ్మితే, మరికొందరు మాత్రం అతడు భయంతో పారిపోయాడని అనుకున్నారు.
 
 కొన్నాళ్లకు బ్రామ్ బోన్స్ ఆనందంగా కత్రినాను వివాహం చేసుకున్నాడు. ఎవరైనా తలలేని రౌతు కథను ప్రస్తావిస్తే బ్రామ్ ముసిముసి నవ్వులు నవ్వేవాడు. అది నిజంగా దెయ్యం పనా, లేక ప్రత్యర్థిని తరిమికొట్టేందుకు బ్రామ్ ఆడిన తెలివైన నాటకమా అన్నది నేటికీ స్లీపీ హాలో గ్రామ రహస్యంగానే మిగిలిపోయింది!
+
+</div>
+
+<div class="en" markdown="1">
+
+Once upon a time there was a quiet little village called Sleepy Hollow. Ringed by thick forests, tall hills and narrow streams, the place always seemed wrapped in a strange spell. The people of the village believed deeply in ghosts, spirits and tales of magic.
+
+In that village lived a schoolmaster named Ichabod Crane. He was thin as a reed, tall as a palm tree, and had big, flapping ears that gave him an odd look. Besides teaching the village children, he passed his time eating at the homes of the village elders. Though he was an educated man, stories of superstition and ghosts filled him with a little fear and a great deal of curiosity.
+
+In the same village lived Katrina Van Tassel, the darling daughter of a wealthy landlord. Seeing her beauty and her father's riches, Ichabod secretly hoped to marry her. But the village also had a bold, rough young strongman named Brom Bones, who liked Katrina too. Brom did not like the schoolmaster hanging around Katrina one bit, and he waited for a chance to play a trick on him.
+
+One night, Katrina's father held a grand feast at his mansion. When the music and dancing were over, everyone sat together and began to tell the frightening tales that were whispered around the village. The most famous of them all was the tale of the Headless Horseman, a soldier who had lost his head in battle and now rode his horse along the village borders! As Ichabod listened, his heart began to race like a runaway train.
+
+When the feast was over, disappointed that he had failed to win Katrina's heart, Ichabod climbed onto his skinny old horse at midnight and set off alone along the forest road.
+
+The shadows of the thick trees, the moaning of the wind and the hooting of the owls filled Ichabod with terror. Just as he reached the old broken bridge, he heard the thunder of hooves behind him. He looked back, and his heart leapt into his throat! On a huge black horse rode a figure with no head at all. In its hand, where a head should have been, it held something round!
+
+Shaking with fear, Ichabod urged his horse to run faster. But the strange rider chased after him and hurled the round pumpkin in his hand straight at Ichabod. The blow knocked Ichabod off his horse, and he fell to the ground senseless.
+
+<figure>
+  <img src="{{ site.baseurl }}/assets/images/talaleni-rauthu/image-1.jpg" alt="Villagers stare in shock at a fallen hat and a smashed pumpkin by the bridge while a horse grazes nearby" width="1600" height="1195" loading="lazy">
+  <figcaption>The next morning, by the bridge…</figcaption>
+</figure>
+
+The next morning, beside the bridge, the villagers found only Ichabod's crushed hat, the shattered pieces of a pumpkin and his horse standing all alone. Of Ichabod himself, there was no trace. Some believed he had lost his life to the Headless Horseman, while others thought he had simply run away in fright.
+
+Some time later, Brom Bones happily married Katrina. Whenever anyone mentioned the Headless Horseman, Brom would only smile to himself. Was it truly the work of a ghost, or a clever trick Brom played to drive away his rival? To this day, that remains the secret of Sleepy Hollow!
+
+</div>

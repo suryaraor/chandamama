@@ -12,6 +12,16 @@
   --deco-font: "Suravaram", "Noto Serif Telugu", serif;
 }
 
+html[data-lang="en"] {
+  --title-font: "Rozha One", Georgia, serif;
+  --body-font: "Lora", Georgia, serif;
+  --deco-font: "Lora", Georgia, serif;
+}
+
+/* Language switching: .te shows in Telugu mode, .en in English mode */
+html[data-lang="en"] .te { display: none !important; }
+html:not([data-lang="en"]) .en { display: none !important; }
+
 * { box-sizing: border-box; }
 
 html { font-size: 19px; }
@@ -30,6 +40,7 @@ a { color: var(--maroon); }
 
 /* Masthead */
 .masthead {
+  position: relative;
   background: var(--mast);
   color: var(--paper);
   text-align: center;
@@ -43,6 +54,30 @@ a { color: var(--maroon); }
   text-decoration: none;
   color: var(--gold);
 }
+.lang-switch {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  display: flex;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-switch button {
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  padding: 0.1rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+}
+.lang-switch button:first-child { font-family: "Mandali", sans-serif; }
+.lang-switch button:last-child { font-family: "Lora", serif; }
+.lang-switch button[aria-pressed="true"] { background: var(--gold); color: var(--mast); }
+.lang-switch button:focus-visible { outline: 2px solid var(--paper); outline-offset: -3px; }
+
 .moon { width: 3rem; height: 3rem; }
 .brand-name {
   font-family: var(--title-font);
@@ -102,6 +137,7 @@ a { color: var(--maroon); }
   width: 8rem;
   height: 8rem;
   object-fit: cover;
+  object-position: top;
   border: 2px solid var(--maroon);
   flex-shrink: 0;
 }
@@ -150,13 +186,28 @@ a { color: var(--maroon); }
 .illustration { margin: 0 auto 1.6rem; text-align: center; }
 .illustration img {
   max-width: 100%;
+  height: auto;
   border: 3px solid var(--maroon);
   outline: 1px solid var(--maroon);
   outline-offset: 4px;
 }
 
 .story-body p { margin: 0 0 1.1em; text-indent: 2em; text-align: justify; }
-.story-body img { max-width: 100%; display: block; margin: 1.2rem auto; border: 2px solid var(--maroon); }
+.story-body img { max-width: 100%; height: auto; display: block; margin: 1.2rem auto; border: 2px solid var(--maroon); }
+.story-body figure { margin: 1.8rem 0; text-align: center; }
+.story-body figure img {
+  margin: 0 auto;
+  border: 3px solid var(--maroon);
+  outline: 1px solid var(--maroon);
+  outline-offset: 4px;
+}
+.story-body figcaption, .illustration figcaption {
+  margin-top: 0.7rem;
+  font-family: var(--deco-font);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
 .story-body blockquote {
   margin: 1.2rem 0;
   padding: 0.6rem 1.2rem;
@@ -188,6 +239,8 @@ a { color: var(--maroon); }
 
 .end-mark { text-align: center; color: var(--maroon); font-family: var(--title-font); margin-top: 1.6rem; }
 
+.original { text-align: center; font-size: 0.8rem; color: var(--ink-soft); margin: 0.2rem 0 0; }
+
 .back { max-width: 46rem; margin: -1rem auto 0; text-align: center; font-family: var(--deco-font); }
 
 .footer { text-align: center; color: var(--ink-soft); font-size: 0.85rem; padding: 1rem 1rem 2rem; }
@@ -198,6 +251,9 @@ a { color: var(--maroon); }
   .page { margin: 1rem 16px; padding: 1.2rem 1rem; }
   .brand-name { font-size: 2.3rem; }
   .moon { width: 2.3rem; height: 2.3rem; }
+  .masthead { padding-top: 2.6rem; }
+  .lang-switch { left: 50%; right: auto; transform: translateX(-50%); }
+  .story-body p { text-align: left; }
   .story-title { font-size: 1.9rem; }
   .story-card a { flex-direction: column; }
   .story-card img { width: 100%; height: 11rem; }

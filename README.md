@@ -1,25 +1,26 @@
-# చందమామ
+# చందమామ · Chandamama
 
-Telugu stories in the classic Chandamama style, published with GitHub Pages (Jekyll).
+Telugu and English stories in the classic Chandamama style, published with GitHub Pages (Jekyll). Readers can switch between తెలుగు and English at the top of every page.
 
 **Site:** https://suryaraor.github.io/chandamama/
 
-## Writing a new story
+## The easy way: `/publish-story`
 
-1. Copy `story-template.md` into `_stories/` and give it a short English file name, e.g. `_stories/telivaina-kundelu.md`. The file name becomes the URL.
-2. Fill in the front matter:
+1. Drop a story into `input-story/`: a `.md`, `.txt`, `.docx` or `.pdf` in Telugu, English or both, plus any pictures. If you're adding several stories at once, give each one its own subfolder.
+2. In Claude Code, run **`/publish-story`**.
 
-   | Field      | Required | Example                     |
-   |------------|----------|-----------------------------|
-   | `title`    | yes      | `తెలివైన కుందేలు`            |
-   | `author`   | no       | `సూర్య`                      |
-   | `date`     | yes      | `2026-10-22` (sorts the list, newest first) |
-   | `category` | no       | `జానపద కథ`, `పంచతంత్రం`, `భేతాళ కథ` |
-   | `image`    | no       | `/assets/images/kundelu.jpg` |
-   | `moral`    | no       | shown in a నీతి box at the end |
+Claude then:
+- fixes run-together paragraphs, without rewriting your words,
+- writes the missing Telugu or English version,
+- shrinks the images and places them at the right scenes (a `title`/`cover` image becomes the cover),
+- creates `_stories/<slug>.md`,
+- moves your originals to `archive/<date>-<slug>/`,
+- commits, pushes, and checks the live page.
 
-3. Write the story below the `---` in plain Telugu. Leave a blank line between paragraphs.
-4. Put pictures in `assets/images/`. Use `![వివరణ](/chandamama/assets/images/pic.jpg)` to place one inside the story.
-5. Commit and push to `gh-pages`. The site rebuilds in about a minute.
+`input-story/` and `archive/` are git-ignored, so your raw drafts never get published.
 
-You can also do all of this from the GitHub website: open `_stories/`, click **Add file → Create new file**, paste the template, and commit.
+The skill lives in `.claude/skills/publish-story/`.
+
+## Writing a story by hand
+
+Copy `story-template.md` to `_stories/<slug>.md`. Fill in the front matter, then write the Telugu text inside the `te` block and the English text inside the `en` block. Leave a blank line between paragraphs. Put pictures in `assets/images/<slug>/`, then commit and push. The site rebuilds in about a minute.

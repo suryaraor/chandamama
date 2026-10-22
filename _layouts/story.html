@@ -2,13 +2,13 @@
 layout: default
 ---
 <article class="story">
-  {% if page.category %}<p class="category">{{ page.category }}</p>{% endif %}
-  <h1 class="story-title">{{ page.title }}</h1>
-  {% if page.author %}<p class="byline">రచన: {{ page.author }}</p>{% endif %}
+  {% if page.category %}<p class="category"><span class="te">{{ page.category }}</span><span class="en">{{ page.category_en | default: page.category }}</span></p>{% endif %}
+  <h1 class="story-title"><span class="te">{{ page.title }}</span><span class="en">{{ page.title_en | default: page.title }}</span></h1>
+  {% if page.author %}<p class="byline"><span class="te">రచన: {{ page.author }}</span><span class="en">By {{ page.author_en | default: page.author }}</span></p>{% endif %}
 
   {% if page.image %}
-  <figure class="illustration">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  <figure class="illustration cover">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title_en | default: page.title }}">
   </figure>
   {% endif %}
 
@@ -18,12 +18,14 @@ layout: default
 
   {% if page.moral %}
   <aside class="moral">
-    <span class="moral-label">నీతి</span>
-    <p>{{ page.moral }}</p>
+    <span class="moral-label"><span class="te">నీతి</span><span class="en">Moral</span></span>
+    <p class="te">{{ page.moral }}</p>
+    <p class="en">{{ page.moral_en | default: page.moral }}</p>
   </aside>
   {% endif %}
 
-  <p class="end-mark">❁ సమాప్తం ❁</p>
+  <p class="end-mark"><span class="te">❁ సమాప్తం ❁</span><span class="en">❁ The End ❁</span></p>
+  {% if page.original %}<p class="original"><span class="te">మూలం: {{ page.original }}</span><span class="en">Adapted from: {{ page.original }}</span></p>{% endif %}
 </article>
 
-<nav class="back"><a href="{{ '/' | relative_url }}">← అన్ని కథలు</a></nav>
+<nav class="back"><a href="{{ '/' | relative_url }}"><span class="te">← అన్ని కథలు</span><span class="en">← All stories</span></a></nav>

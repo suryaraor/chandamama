@@ -1,26 +1,39 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="te" data-lang="te">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.moral | default: site.description }}">
+  <script>
+    (function () {
+      var l = 'te';
+      try { l = localStorage.getItem('chandamama-lang') || 'te'; } catch (e) {}
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.lang = l;
+    })();
+  </script>
+  <title>{% if page.title %}{{ page.title }}{% if page.title_en %} · {{ page.title_en }}{% endif %} · {% endif %}{{ site.title }} · {{ site.title_en }}</title>
+  <meta name="description" content="{{ page.summary | default: page.moral | default: site.description }}">
+  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&family=Mandali&family=Suravaram&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&family=Mandali&family=Suravaram&family=Rozha+One&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='26' fill='%23f6c33b'/><circle cx='44' cy='24' r='22' fill='%23fbf3dc'/></svg>">
 </head>
 <body>
   <header class="masthead">
+    <nav class="lang-switch" aria-label="Language">
+      <button type="button" data-set-lang="te">తెలుగు</button>
+      <button type="button" data-set-lang="en">English</button>
+    </nav>
     <a class="brand" href="{{ '/' | relative_url }}">
       <svg class="moon" viewBox="0 0 64 64" aria-hidden="true">
         <circle cx="32" cy="32" r="26" fill="#f6c33b"/>
         <circle cx="44" cy="24" r="22" fill="var(--mast)"/>
       </svg>
-      <span class="brand-name">{{ site.title }}</span>
+      <span class="brand-name"><span class="te">{{ site.title }}</span><span class="en">{{ site.title_en }}</span></span>
     </a>
-    <p class="tagline">{{ site.tagline }}</p>
+    <p class="tagline"><span class="te">{{ site.tagline }}</span><span class="en">{{ site.tagline_en }}</span></p>
   </header>
 
   <main class="page">
@@ -29,7 +42,26 @@
 
   <footer class="footer">
     <span class="ornament">❁ ❁ ❁</span>
-    <p>{{ site.title }} · {{ 'now' | date: '%Y' }}</p>
+    <p><span class="te">{{ site.title }}</span><span class="en">{{ site.title_en }}</span> · {{ 'now' | date: '%Y' }}</p>
   </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('[data-set-lang]');
+      function apply(l) {
+        root.setAttribute('data-lang', l);
+        root.lang = l;
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l); });
+      }
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+          apply(b.dataset.setLang);
+          try { localStorage.setItem('chandamama-lang', b.dataset.setLang); } catch (e) {}
+        });
+      });
+      apply(root.getAttribute('data-lang'));
+    })();
+  </script>
 </body>
 </html>
