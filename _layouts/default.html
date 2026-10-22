@@ -7,6 +7,9 @@
     (function () {
       var l = 'te';
       try { l = localStorage.getItem('chandamama-lang') || 'te'; } catch (e) {}
+      var q = new URLSearchParams(location.search).get('lang');
+      if (q === 'te' || q === 'en') l = q;
+      if (l !== 'en') l = 'te';
       document.documentElement.setAttribute('data-lang', l);
       document.documentElement.lang = l;
     })();

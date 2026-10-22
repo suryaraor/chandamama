@@ -95,6 +95,7 @@ a { color: var(--maroon); }
 
 /* Page frame */
 .page {
+  width: calc(100% - 32px);
   max-width: 46rem;
   margin: 2rem auto;
   padding: 2rem 2.2rem;
@@ -241,14 +242,14 @@ a { color: var(--maroon); }
 
 .original { text-align: center; font-size: 0.8rem; color: var(--ink-soft); margin: 0.2rem 0 0; }
 
-.back { max-width: 46rem; margin: -1rem auto 0; text-align: center; font-family: var(--deco-font); }
+.back { margin: 1.4rem auto 0; text-align: center; font-family: var(--deco-font); }
 
 .footer { text-align: center; color: var(--ink-soft); font-size: 0.85rem; padding: 1rem 1rem 2rem; }
 .footer p { margin: 0; }
 
 @media (max-width: 600px) {
   html { font-size: 17px; }
-  .page { margin: 1rem 16px; padding: 1.2rem 1rem; }
+  .page { margin: 1rem auto; padding: 1.2rem 1rem; }
   .brand-name { font-size: 2.3rem; }
   .moon { width: 2.3rem; height: 2.3rem; }
   .masthead { padding-top: 2.6rem; }
